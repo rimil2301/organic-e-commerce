@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Community Forum - SheHarvest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .forum-post {
+            transition: all 0.3s ease;
+        }
+        .forum-post:hover {
+            transform: translateX(5px);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .active-tab {
+            border-bottom: 3px solid #059669;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="WhatsApp Image 2025-04-17 at 21.29.56_d26b7a73.jpg" alt="SheHarvest Logo" class="w-10 h-10 mr-3">
+                <h1 class="text-xl font-bold">SheHarvest - Women's Community Forum</h1>
+            </div>
+            <nav>
+                <a href="home.html" class="mx-2 hover:underline">Home</a>
+                <a href="seller.html" class="mx-2 hover:underline">Sell</a>
+                <a href="buyer.html" class="mx-2 hover:underline">Buy</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+        <div class="mb-8 text-center">
+            <h2 class="text-3xl font-bold mb-2 text-green-700">Community Forum</h2>
+            <p class="text-lg text-gray-700">Connect, share, and learn with other women growers</p>
+        </div>
+
+        <!-- Forum Navigation Tabs -->
+        <div class="flex border-b border-gray-200 mb-8">
+            <button id="tab-discussions" class="px-6 py-3 active-tab">Discussions</button>
+            <button id="tab-questions" class="px-6 py-3">Questions</button>
+            <button id="tab-tips" class="px-6 py-3">Growing Tips</button>
+        </div>
+
+        <!-- Discussion Form -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-4">Start a New Discussion</h3>
+            <div class="mb-4">
+                <label for="postTitle" class="block text-gray-700 mb-2">Title</label>
+                <input type="text" id="postTitle" placeholder="What's your topic about?" 
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            </div>
+            <div class="mb-4">
+                <label for="postContent" class="block text-gray-700 mb-2">Your Message</label>
+                <textarea id="postContent" rows="4" placeholder="Share your thoughts..." 
+                       class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+            </div>
+            <button onclick="createPost()" 
+                    class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                Post Discussion
+            </button>
+        </div>
+
+        <!-- Forum Posts -->
+        <div id="forumPosts" class="space-y-6">
+            <!-- Sample Post 1 -->
+            <div class="forum-post bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-start mb-4">
+                    <div class="bg-green-100 text-green-800 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <span class="text-xl">👩‍🌾</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">How to deal with pests organically?</h4>
+                        <p class="text-gray-600 text-sm">Posted by Priya S. • 2 days ago</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">I've been noticing some pests on my tomato plants. Does anyone have organic solutions that have worked for them? I'd like to avoid chemicals.</p>
+                <div class="flex items-center text-sm text-gray-500">
+                    <span class="mr-4">💬 8 comments</span>
+                    <span>👍 12 likes</span>
+                </div>
+            </div>
+
+            <!-- Sample Post 2 -->
+            <div class="forum-post bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-start mb-4">
+                    <div class="bg-green-100 text-green-800 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <span class="text-xl">🌿</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Best crops for small urban gardens</h4>
+                        <p class="text-gray-600 text-sm">Posted by Ananya M. • 1 week ago</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">I have limited space but want to grow some vegetables. What are the most productive plants for small spaces? I'm in Mumbai with a small balcony.</p>
+                <div class="flex items-center text-sm text-gray-500">
+                    <span class="mr-4">💬 15 comments</span>
+                    <span>👍 24 likes</span>
+                </div>
+            </div>
+
+            <!-- More posts will be loaded here dynamically -->
+        </div>
+    </main>
+
+    <footer class="bg-green-800 text-white p-4 text-center">
+        <p>© 2025 SheHarvest. Together we grow stronger.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

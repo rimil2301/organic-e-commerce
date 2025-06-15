@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheHarvest - Organic Women's Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(photorealistic-view-woman-harvesting-organic-sustainable-garden_23-2151462970.avif);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .logo-popup {
+            animation: popUp 1.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        @keyframes popUp {
+            0% { opacity: 0; transform: translateY(100px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .auth-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(74, 222, 128, 0);
+        }
+        .auth-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(74, 222, 128, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Auth Button at Top Right -->
+    <div class="absolute top-4 right-4 z-10">
+        <a href="auth/login.html" class="auth-btn bg-green-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+            Sign In / Register
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="text-white px-4">
+            <!-- Logo -->
+            <img src="WhatsApp Image 2025-04-17 at 21.29.56_d26b7a73.jpg" alt="SheHarvest Logo" 
+                 class="w-40 h-40 mx-auto mb-8 logo-popup" 
+                 style="animation-delay: 0.3s;">
+            
+            <!-- Animated Title -->
+            <h1 class="text-6xl font-bold mb-6 logo-popup" 
+                style="animation-delay: 0.6s;">
+                <span class="bg-green-600 bg-opacity-90 px-6 py-3 rounded-lg">SheHarvest</span>
+            </h1>
+            
+            <!-- Animated Subtitle -->
+            <p class="text-2xl mb-8 logo-popup" style="animation-delay: 0.9s;">
+                <span class="bg-green-800 bg-opacity-80 px-4 py-2 rounded">
+                    Empowering Women Growers
+                </span>
+            </p>
+            
+            <!-- Enter Button -->
+            <a href="home.html" 
+               class="inline-block bg-green-600 text-white px-10 py-4 rounded-lg text-xl font-semibold enter-btn logo-popup" 
+               style="animation-delay: 1.2s;">
+                Enter Marketplace
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

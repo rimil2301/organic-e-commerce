@@ -1,0 +1,15 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Ritaban Ghosh",
+            "email": "ghoshritaban2006@gmail.com",
+            "password": "$2a$10$ASR8sQIzgUXcj8SHelPEcOvMaZU5KKMs1Wev9PIW47odp1e1N4.ou",
+            "createdAt": "2025-06-12T18:01:51.177Z"
+        }
+    ],
+    "sellers": [],
+    "products": [],
+    "orders": [],
+    "forumPosts": []
+}

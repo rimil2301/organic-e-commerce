@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - SheHarvest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="WhatsApp Image 2025-04-17 at 21.29.56_d26b7a73.jpg" alt="SheHarvest Logo" class="w-10 h-10 mr-3">
+                <h1 class="text-xl font-bold">SheHarvest - Seller Dashboard</h1>
+            </div>
+            <nav>
+                <a href="home.html" class="mx-2 hover:underline">Home</a>
+                <a href="forum.html" class="mx-2 hover:underline">Forum</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-green-700">Welcome to Your Seller Dashboard</h2>
+            
+            <!-- Seller Registration Form -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4">Register as a Seller</h3>
+                <div id="sellerForm" class="max-w-md">
+                    <div class="mb-4">
+                        <label for="sellerName" class="block text-gray-700 mb-2">Your Name</label>
+                        <input type="text" id="sellerName" placeholder="Enter your full name" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="sellerLocation" class="block text-gray-700 mb-2">Your Location</label>
+                        <input type="text" id="sellerLocation" placeholder="Enter your city/town" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <button onclick="registerSeller()" 
+                            class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors w-full">
+                        Register as Seller
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Listing Form -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">List a New Product</h3>
+                <div id="productForm" class="max-w-md">
+                    <div class="mb-4">
+                        <label for="productName" class="block text-gray-700 mb-2">Product Name</label>
+                        <input type="text" id="productName" placeholder="e.g., Organic Tomatoes" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="productPrice" class="block text-gray-700 mb-2">Price (per kg/unit)</label>
+                        <input type="number" id="productPrice" placeholder="e.g., 120" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="productDescription" class="block text-gray-700 mb-2">Description</label>
+                        <textarea id="productDescription" placeholder="Describe your product..." rows="3"
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+                    </div>
+                    <button onclick="listProduct()" 
+                            class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors w-full">
+                        List Product
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Listed Products Section -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold mb-6 text-green-700">Your Listed Products</h3>
+            <div id="sellerProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Products will be displayed here dynamically -->
+                <div class="text-center py-8 text-gray-500" id="noProductsMessage">
+                    You haven't listed any products yet.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-green-800 text-white p-4 text-center">
+        <p>© 2025 SheHarvest. Empowering women growers.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

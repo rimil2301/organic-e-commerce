@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registerForm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-center text-gray-800">Register</h2>
+            <form id="registerForm" class="space-y-6 mt-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="name" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
+                </div>
+    
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
+                </div>
+    
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" required minlength="6"
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
+                </div>
+    
+                <div>
+                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
+                </div>
+    
+                <div class="flex items-center">
+                    <input id="terms" name="terms" type="checkbox" required
+                        class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="terms" class="ml-2 block text-sm text-gray-700">
+                        I agree to the <a href="#" class="text-green-600 hover:underline">Terms</a> and <a href="#" class="text-green-600 hover:underline">Privacy Policy</a>
+                    </label>
+                </div>
+    
+                <div>
+                    <button type="submit"
+                        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                        Register
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

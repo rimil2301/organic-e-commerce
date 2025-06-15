@@ -1,0 +1,192 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Staggered animation delays */
+.fade-in:nth-child(1) { animation-delay: 0.2s; }
+.fade-in:nth-child(2) { animation-delay: 0.4s; }
+.fade-in:nth-child(3) { animation-delay: 0.6s; }
+
+/* Button Styles */
+.btn-primary {
+    background-color: #059669;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #047857;
+    transform: translateY(-2px);
+}
+
+/* Auth Button Styles */
+.auth-btn {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0);
+}
+
+.auth-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.7);
+}
+
+.auth-btn.logged-in {
+    background-color: #047857;
+}
+
+/* Form Styles */
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #059669;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+}
+/* Existing styles (e.g., fade-in, container) remain */
+.grower-section {
+    padding: 40px 20px;
+    background-color: #f9fafb;
+}
+
+.veggie-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.veggie-card:hover {
+    transform: scale(1.05);
+}
+
+.veggie-card img {
+    display: block;
+}
+
+.popup {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: bottom 0.3s ease;
+    z-index: 10;
+    border-radius: 0 0 10px 10px;
+}
+
+.veggie-card:hover .popup {
+    bottom: 0;
+}
+
+.buy-btn {
+    background-color: #059669;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #047857;
+}
+
+/* Keep all existing styles *//* Existing styles (e.g., fade-in, container) remain */
+.grower-section {
+    padding: 40px 20px;
+    background-color: #f9fafb;
+}
+
+.veggie-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.veggie-card:hover {
+    transform: scale(1.05);
+}
+
+.veggie-card img {
+    display: block;
+}
+
+.popup {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: bottom 0.3s ease;
+    z-index: 10;
+    border-radius: 0 0 10px 10px;
+}
+
+.veggie-card:hover .popup {
+    bottom: 0;
+}
+
+.buy-btn {
+    background-color: #059669;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #047857;
+}
+
+/* Keep all existing styles */

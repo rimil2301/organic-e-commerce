@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Organic Produce - SheHarvest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="WhatsApp Image 2025-04-17 at 21.29.56_d26b7a73.jpg" alt="SheHarvest Logo" class="w-10 h-10 mr-3">
+                <h1 class="text-xl font-bold">SheHarvest - Buy Fresh Produce</h1>
+            </div>
+            <nav>
+                <a href="home.html" class="mx-2 hover:underline">Home</a>
+                <a href="forum.html" class="mx-2 hover:underline">Forum</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+        <div class="mb-8 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-green-700">Fresh Organic Produce</h2>
+            <p class="text-lg text-gray-700">Direct from women growers in your community</p>
+        </div>
+
+        <!-- Product Filter -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="flex-1">
+                    <label for="searchProduct" class="block text-gray-700 mb-2">Search Products</label>
+                    <input type="text" id="searchProduct" placeholder="Search by name..." 
+                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                </div>
+                <div>
+                    <label for="filterLocation" class="block text-gray-700 mb-2">Filter by Location</label>
+                    <select id="filterLocation" 
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                        <option value="">All Locations</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bangalore">Bangalore</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Listings -->
+        <div id="productList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Products will be loaded here dynamically -->
+            <div class="text-center py-12 text-gray-500" id="noProductsMessage">
+                Loading products...
+            </div>
+        </div>
+
+        <!-- Order Form -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold mb-6 text-green-700">Place an Order</h3>
+            <div id="orderForm" class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <label for="orderProduct" class="block text-gray-700 mb-2">Product Name</label>
+                    <input type="text" id="orderProduct" placeholder="Enter product name" 
+                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                </div>
+                <div class="mb-4">
+                    <label for="orderQuantity" class="block text-gray-700 mb-2">Quantity (kg/units)</label>
+                    <input type="number" id="orderQuantity" placeholder="Enter quantity" 
+                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                </div>
+                <div class="mb-4">
+                    <label for="orderAddress" class="block text-gray-700 mb-2">Delivery Address</label>
+                    <textarea id="orderAddress" placeholder="Enter your full address" rows="3"
+                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+                </div>
+                <button onclick="placeOrder()" 
+                        class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors w-full">
+                    Place Order
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-green-800 text-white p-4 text-center">
+        <p>© 2025 SheHarvest. Fresh, local, organic.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

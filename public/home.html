@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheHarvest - Organic Produce Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .grower-section {
+            padding: 40px 20px;
+            background-color: #f9fafb;
+        }
+        .veggie-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .veggie-card:hover {
+            transform: scale(1.05);
+        }
+        .popup {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            transition: bottom 0.3s ease;
+            z-index: 10;
+        }
+        .veggie-card:hover .popup {
+            bottom: 0;
+        }
+        .buy-btn {
+            background-color: #059669;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .buy-btn:hover {
+            background-color: #047857;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-green-600 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="WhatsApp Image 2025-04-17 at 21.29.56_d26b7a73.jpg" alt="SheHarvest Logo" class="w-12 h-12 mr-3">
+                <h1 class="text-2xl font-bold">SheHarvest</h1>
+            </div>
+            <nav class="flex space-x-6 items-center">
+                <a href="home.html" class="hover:underline font-medium">Home</a>
+                <a href="seller.html" class="hover:underline font-medium">Sell</a>
+                <a href="buyer.html" class="hover:underline font-medium">Buy</a>
+                <a href="forum.html" class="hover:underline font-medium">Forum</a>
+                <span id="welcome-msg" class="ml-4 font-semibold text-yellow-200"></span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-green-100 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4 fade-in">Fresh, Organic, Women-Grown Produce</h2>
+            <p class="text-xl mb-8 fade-in">Connect directly with local home-growers for chemical-free, hyperlocal food.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="buyer.html" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all fade-in">
+                    Shop Now
+                </a>
+                <a href="seller.html" class="bg-white text-green-600 px-8 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-all fade-in">
+                    Become a Seller
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold mb-12 text-center">Why Choose SheHarvest?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-green-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-green-600 text-4xl mb-4">🌱</div>
+                    <h4 class="text-xl font-semibold mb-3">100% Organic</h4>
+                    <p class="text-gray-700">Chemical-free produce grown with love by local women farmers using sustainable practices.</p>
+                </div>
+                <div class="bg-green-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-green-600 text-4xl mb-4">👩‍🌾</div>
+                    <h4 class="text-xl font-semibold mb-3">Women Empowerment</h4>
+                    <p class="text-gray-700">Direct support for housewives and small-scale women growers, cutting out middlemen.</p>
+                </div>
+                <div class="bg-green-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-green-600 text-4xl mb-4">🚚</div>
+                    <h4 class="text-xl font-semibold mb-3">Hyperlocal Delivery</h4>
+                    <p class="text-gray-700">Fresh produce delivered from your neighborhood within 24 hours of harvest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-green-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold mb-12 text-center">What Our Community Says</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p class="text-gray-700 italic mb-4">"SheHarvest has changed my life. I can now sell my organic vegetables directly to customers and earn twice what I got from middlemen."</p>
+                    <p class="font-semibold">- Priya, Home Grower</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p class="text-gray-700 italic mb-4">"The quality of produce is amazing, and I love knowing I'm supporting women in my community with every purchase."</p>
+                    <p class="font-semibold">- Ananya, Customer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grower Marketplace Section -->
+    <section class="grower-section">
+        <h2 class="text-3xl font-bold text-center mb-8 text-green-800">Grower 1</h2>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Vegetable Card 1: Cabbage -->
+                <div class="veggie-card">
+                    <img src="cabbage-varieties-featured.jpg" alt="Cabbage" class="w-full h-48 object-cover">
+                    <div class="popup">
+                        <p>Cabbage - Freshly grown organic cabbage</p>
+                        <p>Price: $2.50</p>
+                        <a href="buyer.html" class="buy-btn">Buy</a>
+                    </div>
+                </div>
+                <!-- Vegetable Card 2: Carrots -->
+                <div class="veggie-card">
+                    <img src="carrots-7-600x900.jpg" alt="Carrots" class="w-full h-48 object-cover">
+                    <div class="popup">
+                        <p>Carrots - Crunchy organic carrots</p>
+                        <p>Price: $1.80</p>
+                        <a href="buyer.html" class="buy-btn">Buy</a>
+                    </div>
+                </div>
+                <!-- Vegetable Card 3: Spinach -->
+                <div class="veggie-card">
+                    <img src="OIP.jpeg" alt="Spinach" class="w-full h-48 object-cover">
+                    <div class="popup">
+                        <p>Spinach - Nutrient-rich organic spinach</p>
+                        <p>Price: $2.00</p>
+                        <a href="buyer.html" class="buy-btn">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <img src="WhatsApp Image 2025-04-17 at 21.29.56_d26b7a73.jpg" alt="SheHarvest Logo" class="w-16 h-16 mx-auto mb-4">
+                <h2 class="text-2xl font-bold">SheHarvest</h2>
+                <p class="mt-2">Empowering Women Through Organic Farming</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-green-300">About Us</a>
+                <a href="#" class="hover:text-green-300">Contact</a>
+                <a href="#" class="hover:text-green-300">FAQ</a>
+                <a href="#" class="hover:text-green-300">Terms</a>
+            </div>
+            <p class="text-sm">© 2025 SheHarvest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const res = await fetch('/api/auth/user');
+        const data = await res.json();
+        if (data.user && data.user.name) {
+            const firstName = data.user.name.split(' ')[0];
+            document.getElementById('welcome-msg').textContent = `Welcome, ${firstName}`;
+        }
+    } catch (e) {
+        // Fail silently
+    }
+});
+</script>
+</body>
+</html>
