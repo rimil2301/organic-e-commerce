@@ -18,7 +18,7 @@ A full-stack web application for a hackathon, connecting women home-growers with
 
 2. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone "https://github.com/rimil2301/organic-e-commerce.git"
    cd organic-e-commerce
    ```
 
